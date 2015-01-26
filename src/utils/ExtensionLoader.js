@@ -421,8 +421,11 @@ define(function (require, exports, module) {
                     // Custom extensions we want loaded by default
                     // NOTE: Maps to a folder inside /src/extensions/default/
                     "makedrive-sync-icon",
-                    //Custome extension that hides the sidebar, the main toolbar, and the menubar
-                    "HideUI"
+
+                    //Custom extension that hides the sidebar, the main toolbar, and the menubar
+                    "HideUI",
+
+                    "HTMLHinter"
 
                     // "ExampleExtension",
                 ];
