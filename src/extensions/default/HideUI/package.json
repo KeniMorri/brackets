@@ -1,0 +1,19 @@
+{
+    "name": "hideStuff",
+    "title": "Hides UI components",
+    "description": "Hides, sidebars.",
+    "homepage": "",
+    "version": "0.0.1",
+    "author": "Klever Loza Vega <klever.lozavega@myseneca.ca>",
+    "license": "",
+    "engines": {
+        "brackets": ">=1.2.0"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.4",
+        "grunt-contrib-jshint": "^0.10.0"
+    },
+    "scripts": {
+        "test": "grunt"
+    }
+}

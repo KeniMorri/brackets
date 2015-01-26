@@ -204,7 +204,7 @@ define(function main(require, exports, module) {
         if (!_$btnGoLive) {
             _$btnGoLive = $("#toolbar-go-live");
             _$btnGoLive.click(function onGoLive() {
-                _handleGoLiveCommand();
+                //_handleGoLiveCommand(); Remove live preview option
             });
         }
         LiveDevImpl.on("statusChange", function statusChange(event, status, reason) {

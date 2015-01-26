@@ -34,3 +34,6 @@
 [submodule "src/thirdparty/filer-dialogs"]
 	path = src/thirdparty/filer-dialogs
 	url = https://github.com/ScottDowne/filer-dialogs
+[submodule "src/extensions/default/HideUI"]
+	path = src/extensions/default/HideUI
+	url = https://github.com/AJDBenner/HideUI.git 

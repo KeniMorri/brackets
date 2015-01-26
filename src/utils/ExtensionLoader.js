@@ -54,6 +54,8 @@ define(function (require, exports, module) {
         _extensions = {},
         _initExtensionTimeout = INIT_EXTENSION_TIMEOUT,
         srcPath     = FileUtils.getNativeBracketsDirectoryPath();
+
+    //console.log("srcPath: " + srcPath);
     
     /**
      * Stores require.js contexts of extensions
@@ -78,6 +80,8 @@ define(function (require, exports, module) {
      */
     function getUserExtensionPath() {
         if (brackets.app.getApplicationSupportDirectory) {
+            //console.log(brackets.app.getApplicationSupportDirectory() + "/extensions/user");
+            //return "/Users/kleverlozavega/Documents/GitStuff/brackets/src/extensions";
             return brackets.app.getApplicationSupportDirectory() + "/extensions/user";
         }
 
@@ -122,6 +126,7 @@ define(function (require, exports, module) {
     function _mergeConfig(baseConfig) {
         var deferred = new $.Deferred(),
             extensionConfigFile = FileSystem.getFileForPath(baseConfig.baseUrl + "/requirejs-config.json");
+            //console.log(FileSystem.getFileForPath(baseConfig.baseUrl + "/requirejs-config.json"));
 
         // Optional JSON config for require.js
         FileUtils.readAsText(extensionConfigFile).done(function (text) {
@@ -158,6 +163,7 @@ define(function (require, exports, module) {
      *              (Note: if extension contains a JS syntax error, promise is resolved not rejected).
      */
     function loadExtensionModule(name, config, entryPoint) {
+        //console.log("Config: " + config.baseUrl);
         var extensionConfig = {
             context: name,
             baseUrl: config.baseUrl,
@@ -165,6 +171,7 @@ define(function (require, exports, module) {
             paths: globalConfig,
             locale: brackets.getLocale()
         };
+        //console.log("baseUrl: " + extensionConfig);
         
         // Read optional requirejs-config.json
         var promise = _mergeConfig(extensionConfig).then(function (mergedConfig) {
@@ -413,7 +420,9 @@ define(function (require, exports, module) {
 
                     // Custom extensions we want loaded by default
                     // NOTE: Maps to a folder inside /src/extensions/default/
-                    "makedrive-sync-icon"
+                    "makedrive-sync-icon",
+                    //Custome extension that hides the sidebar, the main toolbar, and the menubar
+                    "HideUI"
 
                     // "ExampleExtension",
                 ];

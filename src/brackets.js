@@ -38,6 +38,8 @@
 define(function (require, exports, module) {
     "use strict";
 
+    console.log("backets.js loading");
+
     // Load dependent non-module scripts
     require("widgets/bootstrap-dropdown");
     require("widgets/bootstrap-modal");
@@ -218,6 +220,7 @@ define(function (require, exports, module) {
      * Setup Brackets
      */
     function _onReady() {
+        console.log("On ready function");
         PerfUtils.addMeasurement("window.document Ready");
 
         // Use quiet scrollbars if we aren't on Lion. If we're on Lion, only
@@ -246,6 +249,7 @@ define(function (require, exports, module) {
             extensionLoaderPromise.always(function () {
                // Signal that extensions are loaded
                 AppInit._dispatchReady(AppInit.EXTENSIONS_LOADED);
+                console.log("extensions loading");
 
                 // Finish UI initialization
                 ViewCommandHandlers.restoreFontSize();
