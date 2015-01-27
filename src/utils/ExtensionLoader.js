@@ -422,9 +422,6 @@ define(function (require, exports, module) {
                     // NOTE: Maps to a folder inside /src/extensions/default/
                     "makedrive-sync-icon",
 
-                    //Custom extension that hides the sidebar, the main toolbar, and the menubar
-                    "HideUI",
-
                     "HTMLHinter"
 
                     // "ExampleExtension",

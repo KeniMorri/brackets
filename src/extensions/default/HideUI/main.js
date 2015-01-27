@@ -49,7 +49,7 @@ CommandManager.register("Remove UI", MY_COMMAND_ID, main);
 var menu = Menus.getMenu(Menus.AppMenuBar.FILE_MENU);
 menu.addMenuItem(MY_COMMAND_ID, "Ctrl-Alt-H");
 
-AppInit.appReady(function(){
+AppInit.htmlReady(function(){
 	main();
 });
 });
